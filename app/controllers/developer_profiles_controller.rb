@@ -1,4 +1,6 @@
 class DeveloperProfilesController < ApplicationController
+  before_action :set_user
+
   def index
     @developer_profiles = DeveloperProfile.all
   end
@@ -13,8 +15,9 @@ class DeveloperProfilesController < ApplicationController
 
   def create
     @developer_profile = DeveloperProfile.new(developer_profile_params)
+    @developer_profile.user = @user
     if @developer_profile.save
-      redirect_to
+      redirect_to user_developer_profile(@developer_profile)
     else
       render :new
     end
@@ -33,7 +36,13 @@ class DeveloperProfilesController < ApplicationController
     end
   end
 
+  private
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
   def developer_profile_params
-    params.require(:developer_profile).permit(:name, :descripiton, :price)
+    params.require(:developer_profile).permit(:name, :description, :price)
   end
 end
