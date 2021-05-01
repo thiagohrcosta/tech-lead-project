@@ -17,7 +17,7 @@ class DeveloperProfilesController < ApplicationController
     @developer_profile = DeveloperProfile.new(developer_profile_params)
     @developer_profile.user = @user
     if @developer_profile.save
-      redirect_to user_developer_profile(@developer_profile)
+      redirect_to user_developer_profile_path(@developer_profile)
     else
       render :new
     end
