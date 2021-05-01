@@ -1,5 +1,5 @@
 class DeveloperProfilesController < ApplicationController
-  before_action :set_user
+  # before_action :set_user
 
   def index
     @developer_profiles = DeveloperProfile.all
@@ -15,9 +15,9 @@ class DeveloperProfilesController < ApplicationController
 
   def create
     @developer_profile = DeveloperProfile.new(developer_profile_params)
-    @developer_profile.user = @user
+    @developer_profile.user = current_user
     if @developer_profile.save
-      redirect_to user_developer_profile_path(@developer_profile[:id])
+      redirect_to developer_profiles_path
     else
       render :new
     end

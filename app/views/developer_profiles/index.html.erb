@@ -1,4 +1,4 @@
 <h1>All developer profiles</h1>
 <% @developer_profiles.each do |developer_profile| %>
-  <%= link_to developer_profile.name, developer_profile_path(developer_profile) %>
+  <%= link_to developer_profile.name, developer_profile_path(developer_profile.id) %>
 <% end %>
