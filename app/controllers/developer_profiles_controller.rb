@@ -1,5 +1,4 @@
 class DeveloperProfilesController < ApplicationController
-  # before_action :set_user
 
   def index
     @developer_profiles = DeveloperProfile.all

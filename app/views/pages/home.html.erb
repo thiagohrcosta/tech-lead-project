@@ -24,28 +24,17 @@
   </div>
   <div class="developer-container">
     <h2 class="mt-4">Frontend Developers</h2>
-
-
     <div class="developer-grid">
-      <div class="developer-card">
-        <p>Ana Gomes</p>
+     <% @users = User.all %>
+      <% @users.each do |user| %>
+         <div class="developer-card">
+          <%= user.email %>
+          <%= user.photo %>
+          <p>Ana Gomes</p>
         <h5>Frontend developer</h5>
         <p>$250 / hour</p>
       </div>
-       <div class="developer-card">
-        <p>Ana</p>
-        <p>Gomes</p>
-      </div>
-       <div class="developer-card">
-        <p>Ana</p>
-        <p>Gomes</p>
-      </div>
-       <div class="developer-card">
-        <p>Ana</p>
-        <p>Gomes</p>
-      </div>
-    </div>
-
+      <% end %>
   </div>
 
 </div>
