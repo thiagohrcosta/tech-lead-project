@@ -1,4 +1,16 @@
-<h1>All developer profiles</h1>
-<% @developer_profiles.each do |developer_profile| %>
-  <%= link_to developer_profile.name, developer_profile_path(developer_profile.id) %>
-<% end %>
+<div class="container section">
+  <h1 class="title">Choose by profile</h1>
+  <div class="background">
+    <div class="box-flex">
+      <% @developer_profiles.each do |developer_profile| %>
+        <div class="box-flat">
+          <%= link_to developer_profile_path(developer_profile.id), class: "box-flat" do %>
+          <img class="img" src="https://res.cloudinary.com/dloadb2bx/image/upload/v1619894998/photo-1575089976121-8ed7b2a54265_rztlsa.jpg">
+          <div class="nome"> <%= developer_profile.name.capitalize %> </div>
+          <p class="preco"> R$ <%= developer_profile.price %> </p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>  
