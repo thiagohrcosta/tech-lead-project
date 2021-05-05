@@ -28,7 +28,7 @@
       <% @developer_profiles.each do |developer_profile| %>
          <div class="developer-card">
           <%= developer_profile.user.email %>
-          <img src="<%= developer_profile.user.photo %>" alt="">
+          <img style="width: 200px" src="<%= developer_profile.user.photo %>" alt="">
           <%= developer_profile.user.first_name %>
         <h5>Frontend developer</h5>
         <p>$250 / hour</p>
