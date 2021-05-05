@@ -36,6 +36,6 @@ class ContractsController < ApplicationController
   end
 
   def contract_params
-    params.require(:developer_profile, :user)
+    params.require(:contract).permit(:developer_profile, :user)
   end
 end
