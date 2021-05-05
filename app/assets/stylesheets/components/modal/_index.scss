@@ -1,0 +1,47 @@
+.modal-custom{
+  margin-top: 200px;
+
+}
+
+.img-modal{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.user-modal{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-text{
+  text-align: center;
+}
+
+.modal-price{
+  font-weight: bold;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background-color: #ff8474;
+  color: #fff;
+}
+
+.btn-agree {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  background-color: #3c6e71;
+}
+
+.btn-cancel{
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #ff8474;
+  width: 100%;
+}
