@@ -25,11 +25,48 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
           <h4 class="pricep">Price / hour</h4>
 
-          <a class="btn btn-green" href="#">Hire me! </a>
-
+          <button type="button" class="btn btn-agree" data-toggle="modal" data-target="#exampleModal">
+          Hire me!
+          </button>
 
         </div>
 
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade modal-custom" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contract</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="user-modal">
+          <img class="img-modal img-user" src="<%= current_user.photo %>">
+          <h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
+        </div>
+        <hr>
+        <h2 class="modal-text">You are hiring</h2>
+        <div class="user-modal">
+          <img class="img-modal" src="<%= @developer_profile.user.photo %>">
+          <div>
+            <h3> <%= @developer_profile.user.first_name %> <%= @developer_profile.user.last_name %></h3>
+            <p class="modal-price">$<%= @developer_profile.price %>/hour</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-cancel" data-dismiss="modal">No, I want to Cancel</button>
+        <%= link_to "Yes, I agree", new_contract_path(@contract), class: "btn btn-agree" %>
+        <!-- <button type="button" class="btn btn-agree">Yes, I agree</button> -->
       </div>
     </div>
   </div>
