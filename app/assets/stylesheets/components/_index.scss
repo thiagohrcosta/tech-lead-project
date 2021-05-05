@@ -5,6 +5,12 @@
 @import "form";
 @import "developer_profiles";
 
+
+
+@import "banner";
+@import "button";
+@import "developer_profiles";
+
 .banner-container{
 
     background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url("https://res.cloudinary.com/dloadb2bx/image/upload/v1619880803/photo-1612194554074-81669dba235c_nd6rrz.jpg");
@@ -136,7 +142,7 @@ h1{
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.btn-flat{
+.btn-flat {
   background-color: #3C6E71;
   color: #fff;
   font-weight: bold;
