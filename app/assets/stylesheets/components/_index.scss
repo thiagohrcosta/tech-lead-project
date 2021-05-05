@@ -5,6 +5,7 @@
 @import "form";
 @import "banner";
 @import "developer_profiles";
+@import "button";
 
 .banner-container{
 
@@ -137,7 +138,7 @@ h1{
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.btn-flat{
+.btn-flat {
   background-color: #3C6E71;
   color: #fff;
   font-weight: bold;
