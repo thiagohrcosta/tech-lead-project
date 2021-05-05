@@ -25,12 +25,11 @@
   <div class="developer-container">
     <h2 class="mt-4">Frontend Developers</h2>
     <div class="developer-grid">
-     <% @users = User.all %>
-      <% @users.each do |user| %>
+      <% @developer_profiles.each do |developer_profile| %>
          <div class="developer-card">
-          <%= user.email %>
-          <%= user.photo %>
-          <p>Ana Gomes</p>
+          <%= developer_profile.user.email %>
+          <img style="width: 200px" src="<%= developer_profile.user.photo %>" alt="">
+          <%= developer_profile.user.first_name %>
         <h5>Frontend developer</h5>
         <p>$250 / hour</p>
       </div>
