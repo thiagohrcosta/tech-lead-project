@@ -1,20 +1,21 @@
 class ContractsController < ApplicationController
-  before_action :set_user
-  before_action :set_developer
+  before_action :set_developer, only: [:new, :create]
 
   def show
     @contract = Contract.find(params[:id])
   end
 
+  # não precisa do new
   def new
     @contract = Contract.new
   end
 
   def create
-    @contract = Contract.new(contract_params)
-    @contract.user = @user
+    @contract = Contract.new
+    @contract.user = current_user
+    @contract.developer_profile = @developer_profile
     if @contract.save
-      redirect_to user_path(@user)
+      redirect_to developer_profile_path(@developer_profile)
     else
       render :new
     end
@@ -27,15 +28,19 @@ class ContractsController < ApplicationController
 
   private
 
-  def set_user
-    @user = current_user
+  # def set_user
+  #   @user = current_user
+  # end
+
+  # show, edit, create, destroy
+  def set_contract
   end
 
   def set_developer
-    @developer_profile = DeveloperProfile.find(params[:user_id])
+    @developer_profile = DeveloperProfile.find(params[:developer_profile_id])
   end
 
-  def contract_params
-    params.require(:contract).permit(:developer_profile, :user)
-  end
+  # def contract_params
+  #   params.require(:contract).permit(:developer_profile,:user)
+  # end
 end

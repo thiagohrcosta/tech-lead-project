@@ -67,7 +67,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-cancel" data-dismiss="modal">No, I want to Cancel</button>
-          <%= link_to "Yes, I agree", new_contract_path(@contract), class: "btn btn-agree" %>
+          <%= link_to "Yes, I agree", developer_profile_contracts_path(@developer_profile), method: :post, class: "btn btn-agree" %>
           <!-- <button type="button" class="btn btn-agree">Yes, I agree</button> -->
         </div>
       </div>

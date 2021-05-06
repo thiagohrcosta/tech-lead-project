@@ -1,4 +1,4 @@
 class Contract < ApplicationRecord
-  has_one :user
-  has_one :developer_profile
+  belongs_to :user
+  belongs_to :developer_profile
 end
