@@ -25,7 +25,7 @@
   <div class="developer-container">
     <h2 class="mt-4">Frontend Developers</h2>
     <div class="developer-grid">
-      <% @developer_profiles.take(4).each do |developer_profile| %>
+      <% @developer_profiles.sample(4).each do |developer_profile| %>
          <div class="developer-card home-developer-card">
 <!--           <%= developer_profile.user.email %> -->
           <img class="img-profile-home" src="<%= developer_profile.user.photo %>" alt="">
