@@ -25,13 +25,16 @@
   <div class="developer-container">
     <h2 class="mt-4">Frontend Developers</h2>
     <div class="developer-grid">
-      <% @developer_profiles.each do |developer_profile| %>
-         <div class="developer-card">
-          <%= developer_profile.user.email %>
-          <img style="width: 200px" src="<%= developer_profile.user.photo %>" alt="">
-          <%= developer_profile.user.first_name %>
-        <h5>Frontend developer</h5>
-        <p>$250 / hour</p>
+      <% @developer_profiles.take(4).each do |developer_profile| %>
+         <div class="developer-card home-developer-card">
+<!--           <%= developer_profile.user.email %> -->
+          <img class="img-profile-home" src="<%= developer_profile.user.photo %>" alt="">
+          <div class="names-home">
+            <p class="first-name-home"><%= developer_profile.user.first_name %></p>
+            <p class="last-name-home"><%= developer_profile.user.last_name %></p>
+          </div>
+        <h5 class="developer-role">Frontend developer</h5>
+        <p class="developer-price">$ <%= developer_profile.price %></p>
       </div>
       <% end %>
   </div>
