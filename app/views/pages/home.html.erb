@@ -29,9 +29,14 @@
          <div class="developer-card home-developer-card">
 <!--           <%= developer_profile.user.email %> -->
           <img class="img-profile-home" src="<%= developer_profile.user.photo %>" alt="">
-          <div class="names-home">
-            <p class="first-name-home"><%= developer_profile.user.first_name %></p>
-            <p class="last-name-home"><%= developer_profile.user.last_name %></p>
+          <div class="name-go-to">
+            <div class="names-home">
+              <p class="first-name-home"><%= developer_profile.user.first_name %></p>
+              <p class="last-name-home"><%= developer_profile.user.last_name %></p>
+            </div>
+            <div>
+              <i class="fas fa-external-link-alt fa-custom-go-to fa-3x"></i>
+            </div>
           </div>
         <h5 class="developer-role">Frontend developer</h5>
         <p class="developer-price">$ <%= developer_profile.price %></p>
