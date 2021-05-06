@@ -1,8 +1,9 @@
 <div class="">
   <%= simple_form_for [developer_profile] do |f| %>
     <%= f.input :name %>
+    <%= f.input :technologies %>
     <%= f.input :description %>
     <%= f.input :price %>
-    <%= f.submit class:"btn-green"%>
+    <%= f.submit class:"btn btn-agree"%>
   <% end %>
 </div>
