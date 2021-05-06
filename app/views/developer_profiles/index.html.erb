@@ -5,7 +5,7 @@
       <% @developer_profiles.each do |developer_profile| %>
         <div class="box-flat">
           <%= link_to developer_profile_path(developer_profile.id), class: "box-flat" do %>
-          <img class="img" src="https://res.cloudinary.com/dloadb2bx/image/upload/v1619894998/photo-1575089976121-8ed7b2a54265_rztlsa.jpg">
+          <img class="img" src="<%= developer_profile.user.photo %>">
           <div class="nome"> <%= developer_profile.name.capitalize %> </div>
           <p class="preco"> R$ <%= developer_profile.price %> </p>
           <% end %>
@@ -13,4 +13,4 @@
       <% end %>
     </div>
   </div>
-</div>  
+</div>
