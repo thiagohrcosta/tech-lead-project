@@ -1,0 +1,43 @@
+.img-profile-home{
+  width: 100%;
+  height: 320px;
+}
+
+.home-developer-card{
+  position: relative;
+}
+
+.developer-role{
+  color: #fff;
+  opacity: 0.75;
+  font-weight: bold;
+  padding: 0 10px;
+  position: absolute;
+  margin-top: -140px;
+}
+
+.developer-price{
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  padding: 5px 20px;
+  margin-left: 55%;
+  font-size: 22px;
+  position: absolute;
+  margin-top: -420px;
+
+}
+
+.first-name-home{
+  opacity: 0.5;
+  font-size: 28px;
+}
+
+.names-home{
+  padding: 10px;
+}
+
+.last-name-home{
+  margin-top: -30px;
+  font-size: 32px;
+  font-weight: bold;
+}
