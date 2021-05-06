@@ -7,6 +7,21 @@
   position: relative;
 }
 
+.developer-box-home{
+  opacity: 1;
+  color: #000;
+  text-decoration: none;
+}
+
+.developer-box-home:hover{
+  color: #384B63;
+
+  opacity: 0.9;
+  text-decoration: none;
+
+}
+
+
 .developer-role{
   color: #fff;
   opacity: 0.75;
@@ -41,3 +56,4 @@
   font-size: 32px;
   font-weight: bold;
 }
+
