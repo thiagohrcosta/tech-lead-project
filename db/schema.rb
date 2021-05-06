@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 2021_05_06_005047) do
+ActiveRecord::Schema.define(version: 2021_05_06_014338) do
 
 
   # These are extensions that must be enabled in order to support this database
@@ -37,20 +37,6 @@ ActiveRecord::Schema.define(version: 2021_05_06_005047) do
     t.index ["user_id"], name: "index_developer_profiles_on_user_id"
   end
 
-  create_table "public_profile_specialties", force: :cascade do |t|
-    t.bigint "specialty_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["specialty_id"], name: "index_public_profile_specialties_on_specialty_id"
-  end
-
-  create_table "specialties", force: :cascade do |t|
-    t.string "title"
-    t.string "language"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -69,5 +55,4 @@ ActiveRecord::Schema.define(version: 2021_05_06_005047) do
   add_foreign_key "contracts", "developer_profiles"
   add_foreign_key "contracts", "users"
   add_foreign_key "developer_profiles", "users"
-  add_foreign_key "public_profile_specialties", "specialties"
 end
