@@ -7,17 +7,23 @@
     <div class="col-lg-6">
       <%= @user.first_name %>
       <%= @user.email %>
-      <h2>Contracts</h2>
-      <div>
-        <% @user.contracts.each do |contract| %>
-          <p>
-          <%= contract.developer_profile_id %>
-          </p>
-        <% end %>
-      </div>
-
     </div>
   </div>
+
+  <h2 class="text-contracts">People Hired</h2>
+  <div>
+    <% @user.contracts.each do |contract| %>
+      <div class="contracts-display">
+        <img class="img-dev-contract" src="<%= contract.developer_profile.user.photo %>">
+        <p><%= contract.developer_profile.name %></p>
+        <p>Contract number: <%= contract.id %>
+        <div>
+          <p class="btn-complete">Mark as complete</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
 </div>
 
 <div>
