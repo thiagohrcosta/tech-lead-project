@@ -32,19 +32,28 @@
 }
 
 .img-dev-contract{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  border-radius: 20px 0 0 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+
 }
 
 .contracts-display{
-  padding: 20px;
-  border: 1px solid #9d9d9d;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #E8E8E8  ;
   margin: 10px 0;
   display: flex;
   justify-content: space-between;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
+}
+
+.no-gutter{
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .btn-complete{
@@ -54,6 +63,10 @@
   width: 100%;
   background-color: #384B63;
   padding: 5px 25px;
+}
+
+.dev-info-box{
+  padding: 20px;
 }
 
 .user-info{
