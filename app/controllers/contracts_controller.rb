@@ -1,5 +1,5 @@
 class ContractsController < ApplicationController
-  before_action :set_developer, only: [:new, :create]
+  before_action :set_developer, only: [:new, :create, :show]
 
   def show
     @contract = Contract.find(params[:id])
