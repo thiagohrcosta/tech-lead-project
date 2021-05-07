@@ -15,7 +15,7 @@ class ContractsController < ApplicationController
     @contract.user = current_user
     @contract.developer_profile = @developer_profile
     if @contract.save
-      redirect_to developer_profile_path(@developer_profile)
+      redirect_to user_path(current_user)
     else
       render :new
     end
