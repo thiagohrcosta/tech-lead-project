@@ -1,16 +1,22 @@
 <div class="container bg-user-container">
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-5 box-user-info">
       <img class="img-dev-show bg-dev-show" src="<%= @user.photo %>">
 
     </div>
-    <div class="col-lg-6">
-      <%= @user.first_name %>
-      <%= @user.email %>
+    <div class="col-lg-7 box-user-info bg-user-container-right">
+      <div class="user-info">
+        <p class="user-name"><%= @user.first_name %></p>
+        <p class="user-last-name"><%= @user.last_name %></p>
+        <p>User email: <%= @user.email %></p>
+      </div>
+      <p class="btn btn-agree">Edit my profile</p>
+      <a class="btn btn-agree" href="#hire-people">See who I contracted</a>
+
     </div>
   </div>
 
-  <h2 class="text-contracts">People Hired</h2>
+  <h2 id="hire-people" class="text-contracts">People Hired</h2>
   <div>
     <% @user.contracts.each do |contract| %>
       <div class="contracts-display">
@@ -21,12 +27,11 @@
         </div>
         <p>Contract number: <%= contract.id %>
         <div>
-          <%= link_to "Mark as complete",destroy_contract_path(contract.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn-complete" %>
+          <%= link_to "Mark as complete",destroy_contract_path(contract.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-agree" %>
         </div>
       </div>
     <% end %>
   </div>
-
 </div>
 
 <div>
