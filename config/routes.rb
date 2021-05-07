@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :contracts, only: [:show, :destroy]
 
+  delete "contracts/:id", to: "contracts#destroy", as: :destroy_contract
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

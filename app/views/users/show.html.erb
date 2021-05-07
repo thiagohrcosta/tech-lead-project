@@ -21,7 +21,7 @@
         </div>
         <p>Contract number: <%= contract.id %>
         <div>
-          <p class="btn-complete">Mark as complete</p>
+          <%= link_to "Mark as complete",destroy_contract_path(contract.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn-complete" %>
         </div>
       </div>
     <% end %>
