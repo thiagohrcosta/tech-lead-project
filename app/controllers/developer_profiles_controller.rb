@@ -1,7 +1,11 @@
 class DeveloperProfilesController < ApplicationController
 
   def index
-    @developer_profiles = DeveloperProfile.all
+    if params[:query].present?
+      @developer_profiles = DeveloperProfile.search_by_all(params[:query])
+    else
+      @developer_profiles = DeveloperProfile.all
+    end
   end
 
   def show
