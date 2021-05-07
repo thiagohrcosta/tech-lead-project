@@ -7,15 +7,22 @@
     <div class="col-lg-6">
       <%= @user.first_name %>
       <%= @user.email %>
+      <h2>Contracts</h2>
+      <div>
+        <% @user.contracts.each do |contract| %>
+          <p>
+          <%= contract.developer_profile_id %>
+          </p>
+        <% end %>
+      </div>
+
     </div>
   </div>
 </div>
 
-<% @user.contracts.each do |contract| %>
-  <p>
-  <%= contract.developer_profile_id %>
-  </p>
-<% end %>
+<div>
+</div>
+
 
 <h2>
 </h2>
