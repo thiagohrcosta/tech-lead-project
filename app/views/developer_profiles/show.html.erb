@@ -23,10 +23,11 @@
           <p> <%= @developer_profile.description %> </p>
           <h4 class="pricep"> <%= @developer_profile.price %> / hour</h4>
 
+          <% if current_user.id != @developer_profile.id %>
           <button type="button" class="btn btn-agree" data-toggle="modal" data-target="#exampleModal">
           Hire me!
           </button>
-
+          <% end %>
         </div>
 
       </div>
