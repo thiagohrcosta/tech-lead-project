@@ -2,7 +2,7 @@
   <%= link_to "Add message", new_contract_post_path, class: 'btn btn-agree' %>
 
   <% @posts.each do |post| %>
-    <p><%= post.message %></p>
+    <p><%= post.message  %> - <%= time_ago_in_words(post.created_at) %></p>
 
   <% end %>
 </div>

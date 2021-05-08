@@ -35,6 +35,7 @@
   </div>
 </div>
 
+<% if current_user.id == @developer_profile.id %>
 <div class="container">
   <div class="open-contracts">
     <h2 id="hire-people" class="text-contracts">My open contracts</h2>
@@ -53,7 +54,6 @@
                 </div>
                 <p>Contract number: <%= contract.id %>
                 <div class="btn-complete-talk">
-                  <% if current_user.id == @developer_profile.id %>
                   <%= link_to "Mark as complete",destroy_contract_path(contract.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-agree" %>
                   <% end %>
                 </div>
