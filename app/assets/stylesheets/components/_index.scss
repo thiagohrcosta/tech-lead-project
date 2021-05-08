@@ -15,7 +15,10 @@
 @import "frontend/index";
 @import "userProfile/index";
 
-.banner-container{
+
+@import "message";
+
+.banner-container {
 
     background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url("https://res.cloudinary.com/dloadb2bx/image/upload/v1619880803/photo-1612194554074-81669dba235c_nd6rrz.jpg");
     height: 70vh;
