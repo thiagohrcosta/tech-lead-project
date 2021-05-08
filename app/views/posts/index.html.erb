@@ -4,9 +4,13 @@
 <% @posts.each do |post| %>
   <div class="notification">
 
-    <img class="avatar" src="<%= current_user.photo %>" />
+    <img class="avatar" src="<%= post.user.photo %>" />
+
     <div class="notification-content">
-      <p><%= post.message  %> - <%= time_ago_in_words(post.created_at) %></p>
+      <div class="message-flex">
+        <p><%= post.message  %></p>
+        <p class="ml-auto message-status">This message was sent: <%= time_ago_in_words(post.created_at) %></p>
+      </div>
     </div>
   </div>
 <% end %>

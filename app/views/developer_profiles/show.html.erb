@@ -53,9 +53,11 @@
                   <p><%= contract.user.email %></p>
                 </div>
                 <p>Contract number: <%= contract.id %>
+                  <div class="">
+                   <p><%= link_to "Talk to Dev", contract_posts_path(contract.id), class: 'btn btn-agree' %></p>
+                  </div>
                 <div class="btn-complete-talk">
                   <%= link_to "Mark as complete",destroy_contract_path(contract.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-agree" %>
-                  <% end %>
                 </div>
 
               </div>
@@ -69,6 +71,7 @@
   </div>
 
 </div>
+<% end %>
 
 <!-- Modal -->
 <div class="modal-position">

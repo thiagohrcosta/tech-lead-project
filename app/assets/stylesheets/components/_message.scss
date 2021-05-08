@@ -40,3 +40,14 @@
 .notification .notification-actions a:hover {
   color: #555555;
 }
+
+
+.message-flex{
+  display: flex;
+  justify-content: space-b;
+}
+
+.message-status{
+  font-size: 12px;
+  opacity: 0.5;
+}
