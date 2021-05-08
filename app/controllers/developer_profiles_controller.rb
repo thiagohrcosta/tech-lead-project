@@ -46,6 +46,6 @@ class DeveloperProfilesController < ApplicationController
   end
 
   def developer_profile_params
-    params.require(:developer_profile).permit(:name, :description, :price)
+    params.require(:developer_profile).permit(:name, :description, :price, :technologies)
   end
 end

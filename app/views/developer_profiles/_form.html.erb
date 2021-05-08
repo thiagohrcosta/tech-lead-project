@@ -1,8 +1,8 @@
 <div class="">
   <%= simple_form_for [developer_profile] do |f| %>
     <%= f.input :name %>
-    <%= f.input :technologies %>
-    <%= f.input :description %>
+    <%= f.input :technologies, label: 'About you' %>
+    <%= f.input :description, label: 'Are you a Fullstack, Fronend or Backend developer?' %>
     <%= f.input :price %>
     <%= f.submit class:"btn btn-agree"%>
   <% end %>
