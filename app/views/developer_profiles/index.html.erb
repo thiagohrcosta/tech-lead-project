@@ -2,12 +2,12 @@
   <h1 class="title">Choose by profile</h1>
   <div class="background">
     <div class="box-flex">
-      <% @developer_profiles.each do |developer_profile| %>
+      <% @developer_profiles.shuffle.each do |developer_profile| %>
         <div class="box-flat">
           <%= link_to developer_profile_path(developer_profile.id), class: "box-flat" do %>
           <img class="img" src="<%= developer_profile.user.photo %>">
-          <div class="nome"> <%= developer_profile.name.capitalize %> </div>
-          <p class="preco"> R$ <%= developer_profile.price %> </p>
+          <div class="nome"> <%= developer_profile.name.titleize %> </div>
+          <p class="preco"> $ <%= developer_profile.price %> </p>
           <% end %>
         </div>
       <% end %>
