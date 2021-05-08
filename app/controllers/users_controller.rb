@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @developer_profile = DeveloperProfile.find(params[:id])
   end
 
   def edit
