@@ -39,10 +39,32 @@ h1{
 .container-bg-search{
   background-color: #384B63;
   border-radius: 20px 20px 0 0;
-  height: 150px;
+  height: 120px;
   margin-top: -100px;
   z-index: 1000;
 }
+
+.search-card{
+  display: flex;
+  justify-content: space-between;
+
+  .search-field{
+    width: 100%;
+
+  }
+
+  .btn-search{
+    color: #fff;
+  }
+
+  .btn-search:hover{
+    color: #fff;
+    opacity: 0.9;
+  }
+
+}
+
+
 
 .developer-grid{
   display: grid;
