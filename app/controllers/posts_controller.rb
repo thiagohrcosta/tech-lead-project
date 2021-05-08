@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
 
   def index
-       @users = User.all
+    @users = User.all
     @developer_profiles = DeveloperProfile.all
-    @posts = Post.order(created_at: :desc).all
+    # @posts = Post.order(created_at: :desc).all
+    @posts = find_contract.posts.order(created_at: :desc).all
   end
 
   def show
