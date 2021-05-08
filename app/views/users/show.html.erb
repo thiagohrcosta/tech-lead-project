@@ -14,8 +14,10 @@
       <p><%= link_to 'Edit my profile', edit_user_path(@user), class: 'btn btn-agree'%></p>
       <% end %>
       <p><a class="btn btn-agree" href="#hire-people">See who I contracted</a></p>
-      <% if @developer_profile.id != nil %>
+      <% if @developer_profile %>
       <p><%= link_to "See my Dev profile", developer_profile_path(@developer_profile.id), class: 'btn btn-agree' %></p>
+      <% else %>
+      <p><%= link_to "Create dev profile", new_developer_profile_path(@developer_profile), class: 'btn btn-agree' %></p>
       <% end %>
     </div>
   </div>

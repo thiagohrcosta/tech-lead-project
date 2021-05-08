@@ -5,7 +5,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @developer_profile = DeveloperProfile.find(params[:id])
+    if @developer_profile
+      @developer_profile = DeveloperProfile.find(params[:id])
+    else
+      render :show
+    end
   end
 
   def edit
