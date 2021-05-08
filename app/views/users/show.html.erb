@@ -32,7 +32,9 @@
               </div>
               <p>Contract number: <%= contract.id %>
               <div>
+                <% if @user.id == current_user.id %>
                 <%= link_to "Mark as complete",destroy_contract_path(contract.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-agree" %>
+                <% end %>
               </div>
 
             </div>
