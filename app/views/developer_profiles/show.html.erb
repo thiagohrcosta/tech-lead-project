@@ -34,6 +34,40 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="open-contracts">
+    <h2 id="hire-people" class="text-contracts">My open contracts</h2>
+    <div>
+        <% @developer_profile.contracts.each do |contract| %>
+        <div class="contracts-display">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 dev-photo-container no-gutter">
+                <img class="img-dev-contract" src="<%= contract.user.photo %>">
+              </div>
+              <div class="col-lg-9 dev-info-box">
+                <div>
+                  <p><%= contract.user.first_name %> <%= contract.user.last_name %></p>
+                  <p><%= contract.user.email %></p>
+                </div>
+                <p>Contract number: <%= contract.id %>
+                <div class="btn-complete-talk">
+                  <% if current_user.id == @developer_profile.id %>
+                  <%= link_to "Mark as complete",destroy_contract_path(contract.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-agree" %>
+                  <% end %>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>
 
 <!-- Modal -->
 <div class="modal-position">
