@@ -2,7 +2,7 @@
   <%= simple_form_for [developer_profile] do |f| %>
     <%= f.input :name %>
     <%= f.input :technologies, label: 'About you' %>
-    <%= f.input :description, label: 'Are you a Frontend, Backend or Fullstack Developer?' %>
+    <%= f.input :description, collection: ["Frontend Development", "Backend Development", "Fullstack Development", "DevOps Development"], label: 'What is your field of expertise?' %>
     <%= f.input :price %>
     <%= f.submit class:"btn btn-agree"%>
   <% end %>
