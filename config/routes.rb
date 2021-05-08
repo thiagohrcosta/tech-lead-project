@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :users, :only => [:show]
+  resources :users, :only => [:show, :edit, :update]
 
   resources :developer_profiles do
     resources :contracts, only: [:create]

@@ -10,7 +10,9 @@
         <p class="user-last-name"><%= @user.last_name %></p>
         <p>User email: <%= @user.email %></p>
       </div>
-      <p class="btn btn-agree">Edit my profile</p>
+      <% if @user.id == current_user.id %>
+      <p><%= link_to 'Edit my profile', edit_user_path(@user), class: 'btn btn-agree'%></p>
+      <% end %>
       <a class="btn btn-agree" href="#hire-people">See who I contracted</a>
 
     </div>
