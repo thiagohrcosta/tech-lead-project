@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <%= link_to "Add message", new_contract_post_path, class: 'btn btn-agree' %>
+
+  <% @posts.each do |post| %>
+    <p><%= post.message %></p>
+
+  <% end %>
+</div>
+
+
+

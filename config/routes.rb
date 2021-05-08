@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   end
 
   root to: 'pages#home'
-  resources :contracts, only: [:show, :destroy]
+  resources :contracts, only: [:show, :destroy] do
+    resources :posts
+  end
 
   delete "contracts/:id", to: "contracts#destroy", as: :destroy_contract
 
