@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
 
   def index
+       @users = User.all
+    @developer_profiles = DeveloperProfile.all
     @posts = Post.order(created_at: :desc).all
   end
 

@@ -3,7 +3,8 @@
 
 <% @posts.each do |post| %>
   <div class="notification">
-    <img src=" <% post.contract.user.photo %> " class="avatar-large" />
+
+    <img class="avatar" src="<%= current_user.photo %>" />
     <div class="notification-content">
       <p><%= post.message  %> - <%= time_ago_in_words(post.created_at) %></p>
     </div>
