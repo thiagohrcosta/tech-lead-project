@@ -1,13 +1,9 @@
 <div class="banner-container">
-
   <div class="banner-text-content">
     <h1 class="text-h1">FIND DEVELOPER</h1>
-
     <p class="subtitile">The best place to hire and to be hired as a developer.</p>
-
   </div>
 </div>
-
 <div class="container">
   <div class="container-bg-search">
     <div class="search-box">
@@ -21,47 +17,32 @@
           %>
         </div>
         <div class="">
-
         <%= submit_tag "Search", class: "btn btn-search btn-agree" %>
         </div>
       <% end %>
       </div>
-<!--       <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-    <div class="search-form-control form-group">
-      <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-      <button name="button" type="submit" class="btn btn-flat">
-        <i class="fas fa-search"></i> Search
-      </button> -->
-    </div>
-  </form>
-
     </div>
   </div>
-
+</div>
   <div class=" container developer-container">
-    <h2 class="mt-4">Frontend Developers</h2>
+    <h2 class="mt-4">Our Developers</h2>
     <div class="developer-grid">
       <% @developer_profiles.sample(4).each do |developer_profile| %>
          <div class="developer-card home-developer-card">
-<!--           <%= developer_profile.user.email %> -->
           <%= link_to developer_profile_path(developer_profile.id), class: "developer-box-home" do %>
           <img class="img-profile-home" src="<%= developer_profile.user.photo %>" alt="">
           <div class="name-go-to">
             <div class="names-home">
-              <p class="first-name-home"><%= developer_profile.user.first_name %></p>
-              <p class="last-name-home"><%= developer_profile.user.last_name %></p>
-            </div>
-            <div>
-              <!-- <i class="fas fa-external-link-alt fa-custom-go-to fa-3x"></i> -->
+              <p class="first-name-home"><%= developer_profile.user.first_name.capitalize %></p>
+              <p class="last-name-home"><%= developer_profile.user.last_name.capitalize %></p>
             </div>
           </div>
-        <h5 class="developer-role">Frontend developer</h5>
+        <h5 class="developer-role"><%= developer_profile.description %></h5>
         <p class="developer-price">$ <%= developer_profile.price %></p>
         <% end %>
       </div>
       <% end %>
   </div>
-
   </div>
 </div>
 <div class="about-us">
@@ -79,12 +60,7 @@
       </div>
     </div>
   </div>
-
 </div>
-
-
-
-
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
