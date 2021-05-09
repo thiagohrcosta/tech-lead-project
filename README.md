@@ -22,6 +22,8 @@ This project was created with:
 | <img  src="https://avatars.githubusercontent.com/u/76529564?v=4"  alt="Kitten"  title="A cute kitten"  width="150"  height="150" /> | <img  src="https://avatars.githubusercontent.com/u/70576668?v=4"  alt="Kitten"  title="A cute kitten"  width="150"  height="150" /> | <img  src="https://avatars.githubusercontent.com/u/76494354?v=4"  alt="Kitten"  title="A cute kitten"  width="150"  height="150" /> | <img  src="https://avatars.githubusercontent.com/u/28869405?v=4"  alt="Kitten"  title="A cute kitten"  width="150"  height="150" /> |
 | [Github](https://github.com/GiorgioZucca)                                                                                           | [Github](https://github.com/gillysayres)                                                                                            | [Github](https://github.com/rhortega)                                                                                               | [Github](https://github.com/thiagohrcosta/)                                                                                         |
 |                                                                                                                                     | [Linkedin](https://www.linkedin.com/in/gillysdantas/)                                                                               |                                                                                                                                     | [Linkedin](https://www.linkedin.com/in/thiago-costa-3566a4176/)                                                                     |
+
+
 Working tools:
 - **Dailying meets:** to see what was done and what needs to be done;
 - **Trello:** team management tool;
